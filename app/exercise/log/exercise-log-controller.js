@@ -3,7 +3,7 @@ import { prisma } from '../../prisma.js'
 
 export const createNewExerciseLog = asyncHandler(async (req, res) => {
 	const { times } = req.body
-	const exerciseId = +req.params.exerciseId
+	const exerciseId = +req.params.id
 
 	let timesDefault = []
 

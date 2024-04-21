@@ -10,7 +10,7 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   email    String   @unique
   name     String
@@ -24,7 +24,7 @@ model User {
 model Workout {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   name        String
   exercises   Exercise[]
@@ -34,7 +34,7 @@ model Workout {
 model Exercise {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   name     String
   times    Int
@@ -48,7 +48,7 @@ model Exercise {
 model ExerciseLog {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   isCompleted Boolean        @default(false) @map("is_completed")
   times       ExerciseTime[]
@@ -66,7 +66,7 @@ model ExerciseLog {
 model ExerciseTime {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   weight      Int     @default(0)
   repeat      Int     @default(0)
@@ -81,7 +81,7 @@ model ExerciseTime {
 model WorkoutLog {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
-  apdatedAt DateTime @updatedAt @map("apdated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   isCompleted  Boolean       @default(false) @map("is_completed")
   exerciseLogs ExerciseLog[]
